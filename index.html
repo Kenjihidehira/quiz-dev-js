@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Dev JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">Projeto JavaScript</p>
+      <h1>Quiz Dev</h1>
+      <p>Teste seus conhecimentos em HTML, CSS, JavaScript e Git com pontuação, tempo e ranking local.</p>
+    </section>
+
+    <section class="panel setup" id="setup">
+      <label>
+        Seu nome
+        <input id="playerName" type="text" maxlength="18" placeholder="Ex: Wesley" />
+      </label>
+
+      <label>
+        Categoria
+        <select id="category">
+          <option value="all">Todas</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="git">Git</option>
+        </select>
+      </label>
+
+      <button id="startBtn">Começar quiz</button>
+    </section>
+
+    <section class="panel quiz hidden" id="quiz">
+      <div class="topbar">
+        <span id="progress">Pergunta 1/10</span>
+        <span class="timer" id="timer">15s</span>
+      </div>
+
+      <div class="meter">
+        <div id="meterBar"></div>
+      </div>
+
+      <p class="tag" id="questionCategory">JavaScript</p>
+      <h2 id="questionText">Pergunta</h2>
+      <div class="answers" id="answers"></div>
+    </section>
+
+    <section class="panel result hidden" id="result">
+      <p class="eyebrow">Resultado</p>
+      <h2 id="scoreTitle">Você fez 0 pontos</h2>
+      <p id="scoreText">Continue treinando.</p>
+      <button id="restartBtn">Jogar novamente</button>
+    </section>
+
+    <aside class="ranking">
+      <h2>Ranking local</h2>
+      <ol id="rankingList"></ol>
+      <button class="ghost" id="clearRankingBtn">Limpar ranking</button>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
